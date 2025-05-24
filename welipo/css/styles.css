@@ -8,6 +8,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
 }
 
 :root {
@@ -32,9 +39,10 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
 /* Imagens responsivas */
@@ -57,10 +65,12 @@ img {
 
 .hero-image img {
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .mulher_welipo img {
     animation: float 6s ease-in-out infinite;
+    max-width: 100%;
 }
 
 .product-image {
@@ -80,6 +90,7 @@ img {
     width: auto;
     margin: 0 auto;
     transition: transform 0.5s ease;
+    max-width: 100%;
 }
 
 .product-card:hover .product-image img {
@@ -236,6 +247,8 @@ header.scrolled {
 .hero-content {
     text-align: center;
     animation: fadeInUp 1s ease-out;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .hero h1 {
@@ -318,6 +331,8 @@ header.scrolled {
 .problem-solution {
     padding: 100px 0;
     background: linear-gradient(0deg, var(--dark-medium) 0%, var(--dark) 100%);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .problem-solution h2 {
@@ -344,6 +359,8 @@ header.scrolled {
     padding: 100px 0;
     position: relative;
     background: linear-gradient(0deg, var(--dark-medium) 0%, var(--dark) 100%);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .benefits h2 {
@@ -362,6 +379,8 @@ header.scrolled {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 60px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .benefit-card {
@@ -414,6 +433,8 @@ header.scrolled {
 .ingredients {
     padding: 100px 0;
     background: linear-gradient(0deg, var(--dark) 0%, var(--dark-medium) 100%);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .ingredients h2 {
@@ -444,6 +465,8 @@ header.scrolled {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     margin-top: 60px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .ingredient-card {
@@ -541,6 +564,8 @@ header.scrolled {
 .products {
     padding: 100px 0;
     background: linear-gradient(0deg, var(--dark) 0%, var(--dark-medium) 100%);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .products h2 {
@@ -559,6 +584,8 @@ header.scrolled {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 60px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .product-card {
@@ -606,6 +633,8 @@ header.scrolled {
 .results {
     padding: 100px 0;
     background: linear-gradient(0deg, var(--dark-medium) 0%, var(--dark) 100%);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .results h2 {
@@ -624,6 +653,8 @@ header.scrolled {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 60px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .result-card {
@@ -664,6 +695,8 @@ header.scrolled {
 .testimonials {
     padding: 100px 0;
     background: linear-gradient(0deg, var(--dark-medium) 0%, var(--dark) 100%);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .testimonials h2 {
@@ -677,6 +710,8 @@ header.scrolled {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .testimonial-card {
@@ -715,6 +750,8 @@ header.scrolled {
     padding: 100px 0;
     text-align: center;
     background: linear-gradient(0deg, var(--dark) 0%, var(--dark-medium) 100%);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .guarantee-content {
@@ -773,18 +810,20 @@ header.scrolled {
     padding: 100px 0;
     background: linear-gradient(0deg, var(--dark-medium) 0%, var(--dark) 100%);
     position: relative;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .offer::before {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background: var(--primary);
-    top: -250px;
-    right: -250px;
-    filter: blur(200px);
+    top: -150px;
+    right: -150px;
+    filter: blur(150px);
     opacity: 0.3;
 }
 
@@ -866,6 +905,8 @@ header.scrolled {
 .faq {
     padding: 100px 0;
     background: linear-gradient(0deg, var(--dark) 0%, var(--dark-medium) 100%);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .faq h2 {
@@ -957,6 +998,8 @@ header.scrolled {
 footer {
     background: var(--dark-light);
     padding: 50px 0 20px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .footer-content {
@@ -986,8 +1029,8 @@ footer {
 /* WhatsApp Float */
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     width: 60px;
     height: 60px;
     background: #25D366;
@@ -1009,8 +1052,13 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
     .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 1.2;
     }
 
     .hero p {
@@ -1029,12 +1077,14 @@ footer {
     .faq h2,
     .guarantee h2,
     .offer h2,
-    .results h2 {
+    .results h2,
+    .nutritional-info h2 {
         font-size: 28px;
     }
 
     .ingredients-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .ingredient-image {
@@ -1053,8 +1103,25 @@ footer {
         font-size: 14px;
     }
 
+    .nutrition-table {
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+    
+    .nutrition-table table {
+        min-width: 500px;
+    }
+    
+    .nutrition-table th,
+    .nutrition-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+
     .countdown-container {
         gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .countdown-item {
@@ -1062,32 +1129,71 @@ footer {
     }
 
     .countdown-number {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .guarantee-content {
-        padding: 30px 20px;
+        padding: 25px 15px;
     }
 
     .offer-benefits {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .faq-container {
+        margin: 0 -10px;
+    }
+
+    .faq-question h3 {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 8px;
+    }
+
     .hero h1 {
-        font-size: 26px;
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 14px;
     }
 
     .button {
         width: 100%;
         text-align: center;
-        padding: 12px 20px;
+        padding: 12px 15px;
         font-size: 14px;
+        margin: 0 auto;
     }
 
     .countdown-number {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .header-content {
@@ -1096,7 +1202,78 @@ footer {
     }
 
     .logo {
+        font-size: 22px;
+    }
+
+    .nutrition-table {
+        margin: 0 -10px;
+        border-radius: 0;
+    }
+    
+    .nutrition-table table {
+        min-width: 400px;
+    }
+    
+    .nutrition-table th,
+    .nutrition-table td {
+        padding: 6px 4px;
+        font-size: 11px;
+    }
+    
+    .nutrition-table th {
+        font-size: 10px;
+    }
+
+    .benefits h2,
+    .ingredients h2,
+    .products h2,
+    .testimonials h2,
+    .faq h2,
+    .guarantee h2,
+    .offer h2,
+    .results h2,
+    .nutritional-info h2 {
         font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .ingredient-content {
+        padding: 15px;
+    }
+
+    .ingredient-content h3 {
+        font-size: 16px;
+    }
+
+    .ingredient-content p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .guarantee-content {
+        padding: 20px 10px;
+    }
+
+    .faq-question h3 {
+        font-size: 14px;
+    }
+
+    .price-current {
+        font-size: 28px;
+    }
+
+    .countdown-container {
+        gap: 8px;
+    }
+
+    .countdown-item {
+        min-width: 50px;
+    }
+
+    .countdown-alert,
+    .urgency-banner {
+        font-size: 14px;
+        padding: 10px;
     }
 }
 
@@ -1105,6 +1282,8 @@ footer {
     background: linear-gradient(135deg, var(--dark-medium), var(--dark));
     padding: 80px 0;
     position: relative;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .nutritional-info::before {
@@ -1176,29 +1355,34 @@ footer {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .nutrition-table table {
     width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
 }
 
 .nutrition-table th {
     background: linear-gradient(45deg, var(--primary-dark), var(--primary));
     color: white;
-    padding: 20px 15px;
+    padding: 15px 10px;
     text-align: left;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 .nutrition-table td {
-    padding: 15px;
+    padding: 12px 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .nutrition-table tbody tr:hover {
@@ -1293,41 +1477,22 @@ footer {
 
 /* Responsividade para Informações Nutricionais */
 @media (max-width: 768px) {
+    .nutritional-info {
+        padding: 60px 0;
+    }
+
     .nutritional-info h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
     
     .nutrition-table {
         overflow-x: auto;
+        margin: 0 -15px;
+        border-radius: 0;
     }
     
     .nutrition-table table {
-        min-width: 600px;
-    }
-    
-    .nutrition-table th,
-    .nutrition-table td {
-        padding: 12px 10px;
-        font-size: 14px;
-    }
-    
-    .nutrition-basic,
-    .nutrition-section {
-        padding: 20px;
-    }
-    
-    .nutrition-section h3 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .nutritional-info {
-        padding: 60px 0;
-    }
-    
-    .nutritional-info h2 {
-        font-size: 28px;
+        min-width: 500px;
     }
     
     .nutrition-table th,
@@ -1338,10 +1503,64 @@ footer {
     
     .nutrition-basic,
     .nutrition-section {
+        padding: 20px;
+        margin: 0 -5px;
+    }
+    
+    .nutrition-section h3 {
+        font-size: 20px;
+    }
+
+    .nutrition-basic {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nutritional-info {
+        padding: 50px 0;
+    }
+    
+    .nutritional-info h2 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    
+    .nutrition-table {
+        margin: 0 -10px;
+    }
+    
+    .nutrition-table table {
+        min-width: 400px;
+    }
+    
+    .nutrition-table th,
+    .nutrition-table td {
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+    
+    .nutrition-table th {
+        font-size: 10px;
+        padding: 8px 4px;
+    }
+    
+    .nutrition-basic,
+    .nutrition-section {
         padding: 15px;
+        margin: 0 -8px;
     }
     
     .nutrition-section h3 {
         font-size: 18px;
+    }
+
+    .nutrition-basic h3 {
+        font-size: 20px;
+    }
+
+    .vd-note {
+        padding: 10px 15px;
+        font-size: 12px;
     }
 }
