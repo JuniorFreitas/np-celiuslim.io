@@ -63,6 +63,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="canonical" href="https://welipo.com.br">
+    <!-- SwiperJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -90,7 +93,7 @@
                         <span class="hero-accent">ULTRA CONCENTRADO</span>
                     </h1>
                     <p class="hero-description">
-                        Descubra a potência máxima em um único suplemento. 
+                        Descubra a potência máxima em um único suplemento.
                         <strong>3x mais concentrado</strong> para resultados rápidos e eficazes.
                     </p>
                     <div class="hero-features">
@@ -135,116 +138,164 @@
             <div class="scroll-arrow"></div>
         </div>
     </section>
-
-     <!-- Benefícios -->
-     <section class="benefits" id="beneficios">
-        <div class="container">
-            <h2>Benefícios <span>Exclusivos</span></h2>
-
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Reduz o Apetite</h3>
-                    <p>Controla a fome exagerada e diminui a vontade de comer doces, facilitando o controle da dieta.
-                    </p>
+    <!-- Faixa de Benefícios -->
+    <section class="benefit-strip">
+        <div class="container benefit-strip-content">
+            <div class="benefit-item">
+                <i class="fas fa-truck"></i>
+                <div>
+                    <span class="benefit-title">ENVIO EM 24H</span>
+                    <span class="benefit-desc">Para todos os estados</span>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <h3>Acelera o Metabolismo</h3>
-                    <p>Aumenta a queima de calorias e gordura corporal, potencializando seus resultados.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <span class="benefit-title">PAGAMENTO SEGURO</span>
+                    <span class="benefit-desc">Seguro e confiável</span>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Mais Energia</h3>
-                    <p>Proporciona disposição e energia para enfrentar o dia sem a fadiga das dietas restritivas.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>100% Natural</h3>
-                    <p>Fórmula segura sem efeitos colaterais, desenvolvida com ingredientes premium.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-credit-card"></i>
+                <div>
+                    <span class="benefit-title">PARCELAMENTO</span>
+                    <span class="benefit-desc">em 12X</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Benefícios -->
+    <section class="benefits" id="beneficios">
+        <div class="container">
+            <h2>
+                Alguns benefícios do <span>WE LIPO BLACK</span> que vão surpreender você!
+            </h2>
+
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="./images/icon-efeito-lift.webp" alt="Efeito Lift Imediato" width="56" height="56"
+                            loading="lazy" />
+                    </div>
+                    <h3>Efeito Lift Imediato</h3>
+                    <p>Acelera a queima da gordura localizada e reduz drasticamente o abdômen, promovendo uma silhueta
+                        mais definida desde as primeiras semanas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="./images/icon-controle-apetite.webp" alt="Controle Total do Apetite" width="56"
+                            height="56" loading="lazy" />
+                    </div>
+                    <h3>Controle Total do Apetite</h3>
+                    <p>Ingredientes inteligentes que reduzem a fome, controlam a vontade de doces e facilitam o seu foco
+                        na dieta, sem sofrimento.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="./images/icon-intestino.png" alt="Intestino Reguladíssimo" width="56" height="56"
+                            loading="lazy" />
+                    </div>
+                    <h3>Intestino Reguladíssimo</h3>
+                    <p>Fibras naturais que equilibram o funcionamento do seu intestino, melhorando o bem-estar e
+                        eliminando o inchaço.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="./images/icon-energia-extra.webp" alt="Energia Extra Para o Seu Dia" width="56"
+                            height="56" loading="lazy" />
+                    </div>
+                    <h3>Energia Extra Para o Seu Dia</h3>
+                    <p>Fórmula que aumenta sua disposição e vitalidade, deixando você mais animado para treinar,
+                        trabalhar e aproveitar a vida.</p>
+                </div>
+            </div>
+            <p class="benefits-intro">
+                <strong>O WE LIPO BLACK</strong> acelera seu metabolismo, potencializa a queima de gordura, inibe a fome
+                e melhora a digestão — tudo isso de forma natural, rápida e eficaz. <br>Experimente resultados reais e
+                surpreenda-se com a transformação!
+            </p>
+        </div>
+        <div class="benefits-cta-wrapper">
+            <a href="#produtos" class="benefits-cta-button">
+                QUERO TRANSFORMAR MEU CORPO AGORA
+            </a>
+        </div>
+    </section>
+
+    <!-- Marquee Animada WE LIPO BLACK -->
+    <section class="marquee-strip">
+        <div class="marquee-inner">
+            <span>
+                WE LIPO BLACK &bull; ULTRA CONCENTRADO &bull; WE LIPO BLACK &bull; ULTRA CONCENTRADO &bull; WE LIPO
+                BLACK &bull; ULTRA CONCENTRADO &bull; WE LIPO BLACK &bull; ULTRA CONCENTRADO &bull; WE LIPO BLACK &bull;
+                ULTRA CONCENTRADO &bull; WE LIPO BLACK &bull; ULTRA CONCENTRADO &bull;
+            </span>
+        </div>
+    </section>
     <!-- Imagem da Mulher -->
-    <section style="background-color: #fff; padding-top: 70px;">
+    <!-- <section style="background-color: #fff; padding-top: 70px;">
         <div class="container">
             <div class="mulher_welipo">
                 <img src="./images/mulher_welipo.webp" alt="Mulher feliz usando WE Lipo - Transformação">
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Problema e Solução -->
-    <section class="problem-solution">
+    <!-- <section class="problem-solution">
         <div class="container">
             <h2>Cansado de <span>Dietas que Não Funcionam?</span></h2>
             <p>Se você está exausto de tentativas frustradas, efeitos rebote e promessas vazias, o WE Lipo é a solução
                 natural que você procura. Nossa fórmula exclusiva foi desenvolvida para ajudar seu corpo a emagrecer com
                 saúde, mantendo sua energia e bem-estar.</p>
         </div>
-    </section>
+    </section> -->
 
-   
+
 
     <!-- Ingredientes -->
     <section class="ingredients" id="ingredientes">
         <div class="container">
-            <h2>Fórmula Científica com <span>Ingredientes Premium</span></h2>
+            <h2 style="margin-bottom: 80px;">Fórmula Científica com <span>Ingredientes Premium</span></h2>
 
-            <div class="urgency-banner">
-                ⚠️ ATENÇÃO: Estoque limitado! Últimas unidades disponíveis hoje!
-            </div>
+            
 
-            <div class="ingredients-grid">
-                <div class="ingredient-card">
-                    <div class="ingredient-image">
-                        <img src="images/cafe_verde.jpg" alt="Café Verde - Coffea Arabica" loading="lazy">
+            <div class="swiper ingredients-swiper">
+                <div class="swiper-wrapper">
+                    <div class="ingredient-card swiper-slide">
+                        <div class="ingredient-image">
+                            <img src="images/cafe_verde.jpg" alt="Cafeína" loading="lazy">
+                        </div>
+                        <div class="ingredient-content">
+                            <h3>Café Verde</h3>
+                            <p>Acelera o metabolismo e
+                                aumenta a termogênese, auxiliando diretamente na queima de gordura corporal.</p>
+                        </div>
                     </div>
-                    <div class="ingredient-content">
-                        <h3>Café Verde (Coffea Arabica)</h3>
-                        <p><strong>Como funciona:</strong> Rico em ácido clorogênico, um potente antioxidante que reduz
-                            a
-                            absorção de glicose no intestino e regula os níveis de açúcar no sangue. Acelera o
-                            metabolismo e
-                            aumenta a termogênese, auxiliando diretamente na queima de gordura corporal.</p>
+                    <div class="ingredient-card swiper-slide">
+                        <div class="ingredient-image">
+                            <img src="images/laranja_moro.jpg" alt="Laranja Moro" loading="lazy">
+                        </div>
+                        <div class="ingredient-content">
+                            <h3>Laranja Moro</h3>
+                            <p>Ajuda na perda peso ao promover a queima de gordura e reduzir a gordura abdominal. Além
+                                disso, melhora a saúde metabólica e reduz os níveis de colesterol.</p>
+                        </div>
+                    </div>
+                    <div class="ingredient-card swiper-slide">
+                        <div class="ingredient-image">
+                            <img src="images/psyllium.jpg" alt="Psyllium" loading="lazy">
+                        </div>
+                        <div class="ingredient-content">
+                            <h3>Psyllium</h3>
+                            <p>Pode auxiliar na perda de peso ao reduzir o apetite, melhorar a saúde digestiva, além de
+                                ajudar no controle dos níveis de açúcar no sangue e no colesterol.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="ingredient-card">
-                    <div class="ingredient-image">
-                        <img src="images/laranja_moro.jpg" alt="Laranja Moro - Citrus Sinensis" loading="lazy">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3>Laranja Moro (Citrus Sinensis)</h3>
-                        <p><strong>Como funciona:</strong> Rica em vitamina C, antocianinas e flavonoides. Possui ação
-                            antioxidante e anti-inflamatória poderosa, ajudando especificamente na redução da gordura
-                            abdominal e prevenindo o envelhecimento precoce.</p>
-                    </div>
-                </div>
-
-                <div class="ingredient-card">
-                    <div class="ingredient-image">
-                        <img src="images/psyllium.jpg" alt="Psyllium - Plantago Ovata" loading="lazy">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3>Psyllium (Plantago Ovata)</h3>
-                        <p><strong>Como funciona:</strong> Fibra solúvel que se expande no estômago, promovendo
-                            saciedade
-                            duradoura. Melhora o trânsito intestinal, regula o colesterol e controla os picos de
-                            insulina,
-                            facilitando o processo de emagrecimento.</p>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
 
             <div class="dosage-info">
@@ -661,6 +712,8 @@
         </div>
     </section>
 
+
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -683,6 +736,27 @@
     </a>
 
     <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.ingredients-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                700: {
+                    slidesPerView: 2,
+                    spaceBetween: 32,
+                },
+                1100: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                }
+            }
+        });
+    </script>
     <script src="js/scripts.js"></script>
 </body>
 
