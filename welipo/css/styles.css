@@ -110,11 +110,12 @@ img {
 }
 
 .product-image img {
-    max-height: 200px;
+    max-height: 160px;
     width: auto;
     margin: 0 auto;
     transition: transform 0.5s ease;
     max-width: 100%;
+    object-fit: contain;
 }
 
 .product-card:hover .product-image img {
@@ -1063,7 +1064,7 @@ header.scrolled {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr 1.3fr 1fr;
     gap: 40px;
     margin-top: 80px;
     width: 100%;
@@ -1072,6 +1073,7 @@ header.scrolled {
     margin-right: auto;
     position: relative;
     z-index: 2;
+    align-items: start;
 }
 
 .product-card {
@@ -1142,6 +1144,84 @@ header.scrolled {
     line-height: 1.6;
 }
 
+/* Estilos para cards estratégicos */
+.product-card-small {
+    transform: scale(0.95);
+    opacity: 0.9;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card-small:hover {
+    transform: scale(1) translateY(-8px);
+    opacity: 1;
+}
+
+.product-card-featured {
+    transform: scale(1.05);
+    border: 2px solid var(--verde-claro);
+    box-shadow: 0 15px 40px rgba(61, 213, 112, 0.3), 0 0 30px rgba(36, 111, 49, 0.4);
+    position: relative;
+    z-index: 3;
+}
+
+.product-card-featured::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--verde-claro), var(--musgo), var(--verde-claro));
+    border-radius: 22px;
+    z-index: -1;
+    animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+.product-card-featured:hover {
+    transform: scale(1.08) translateY(-12px);
+    box-shadow: 0 25px 50px rgba(61, 213, 112, 0.4), 0 0 40px rgba(36, 111, 49, 0.5);
+}
+
+.featured-tag {
+    background: linear-gradient(45deg, var(--verde-claro), var(--musgo)) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    padding: 8px 16px !important;
+    box-shadow: 0 4px 15px rgba(61, 213, 112, 0.4) !important;
+    animation: tagPulse 2s ease-in-out infinite;
+}
+
+@keyframes tagPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.featured-button {
+    background: linear-gradient(45deg, var(--verde-claro), var(--musgo)) !important;
+    box-shadow: 0 8px 25px rgba(61, 213, 112, 0.4) !important;
+    font-weight: 800 !important;
+    font-size: 16px !important;
+    padding: 18px 32px !important;
+    animation: buttonGlow 2s ease-in-out infinite;
+}
+
+@keyframes buttonGlow {
+    0%, 100% { box-shadow: 0 8px 25px rgba(61, 213, 112, 0.4); }
+    50% { box-shadow: 0 12px 35px rgba(61, 213, 112, 0.6), 0 0 20px rgba(61, 213, 112, 0.3); }
+}
+
+.featured-button:hover {
+    background: linear-gradient(45deg, var(--musgo), var(--verde-claro)) !important;
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 0 15px 40px rgba(61, 213, 112, 0.6), 0 0 30px rgba(61, 213, 112, 0.4) !important;
+}
+
 /* Responsividade da seção de produtos */
 @media (max-width: 768px) {
     .products {
@@ -1171,14 +1251,42 @@ header.scrolled {
         padding: 0 15px;
     }
     
+    .product-card-small,
+    .product-card-featured {
+        transform: none;
+        opacity: 1;
+    }
+    
+    .product-card-featured {
+        order: 2;
+        margin: 20px 0;
+    }
+    
+    .product-card-small:first-child {
+        order: 1;
+    }
+    
+    .product-card-small:last-child {
+        order: 3;
+    }
+    
     .product-card {
         border-radius: 15px;
     }
     
     .product-image {
-        height: 180px;
-        padding: 25px;
+        height: 200px;
+        padding: 20px;
         border-radius: 15px 15px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .product-image img {
+        max-height: 160px;
+        width: auto;
+        object-fit: contain;
     }
     
     .product-content {
@@ -1222,9 +1330,17 @@ header.scrolled {
         margin-top: 50px;
     }
     
+    .product-card-featured {
+        margin: 15px 0;
+    }
+    
     .product-image {
-        height: 160px;
-        padding: 20px;
+        height: 180px;
+        padding: 15px;
+    }
+    
+    .product-image img {
+        max-height: 140px;
     }
     
     .product-content {
