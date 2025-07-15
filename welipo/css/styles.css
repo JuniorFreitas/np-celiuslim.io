@@ -1717,6 +1717,7 @@ footer {
     padding: 60px 0 30px;
     overflow-x: hidden;
     width: 100%;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .footer-content {
@@ -1793,6 +1794,12 @@ footer {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.payment-methods img:hover,
+.security-badges img:hover {
+    transform: scale(1.05);
 }
 
 /* WhatsApp Float */
@@ -1825,22 +1832,37 @@ footer {
         padding: 0 10px;
     }
     
+    footer {
+        padding: 40px 0 20px;
+    }
+    
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        gap: 12px;
     }
     
     .footer-section h3 {
         font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 6px;
     }
     
     .footer-links li span,
     .footer-links li a {
         font-size: 13px;
+        line-height: 1.4;
     }
     
     .footer-section p {
         font-size: 12px;
+        line-height: 1.5;
     }
     
     .footer-logo img {
@@ -1849,7 +1871,7 @@ footer {
     
     .payment-methods img,
     .security-badges img {
-        max-width: 200px;
+        max-width: 180px;
     }
 
     .hero h1 {
@@ -1971,38 +1993,80 @@ footer {
         padding: 0 8px;
     }
     
+    footer {
+        padding: 30px 0 15px;
+    }
+    
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
         text-align: center;
+    }
+    
+    .footer-section {
+        gap: 10px;
+        padding: 15px 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-section:last-child {
+        border-bottom: none;
     }
     
     .footer-section h3 {
         text-align: center;
-        font-size: 15px;
+        font-size: 16px;
+        margin-bottom: 6px;
+        color: var(--text);
+        font-weight: 600;
     }
     
     .footer-links {
         text-align: center;
+        margin: 0 auto;
+        max-width: 250px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 8px;
+        padding: 4px 0;
     }
     
     .footer-links li span,
     .footer-links li a {
-        font-size: 12px;
+        font-size: 13px;
+        line-height: 1.4;
+        display: inline-block;
+        padding: 2px 0;
     }
     
     .footer-section p {
-        font-size: 11px;
+        font-size: 12px;
         text-align: center;
+        line-height: 1.6;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo {
+        margin-bottom: 5px;
     }
     
     .footer-logo img {
-        max-width: 100px;
+        max-width: 110px;
+        margin: 0 auto;
+    }
+    
+    .payment-methods,
+    .security-badges {
+        margin: 0 auto;
+        max-width: 200px;
     }
     
     .payment-methods img,
     .security-badges img {
-        max-width: 150px;
+        max-width: 160px;
+        margin: 0 auto;
     }
 
     .hero h1 {
@@ -2104,6 +2168,62 @@ footer {
     .urgency-banner {
         font-size: 14px;
         padding: 10px;
+    }
+}
+
+/* Footer para telas muito pequenas */
+@media (max-width: 320px) {
+    footer {
+        padding: 25px 0 10px;
+    }
+    
+    .footer-content {
+        gap: 20px;
+    }
+    
+    .footer-section {
+        gap: 8px;
+        padding: 0 2px;
+    }
+    
+    .footer-section h3 {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+    
+    .footer-links {
+        max-width: 220px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 6px;
+        padding: 2px 0;
+    }
+    
+    .footer-links li span,
+    .footer-links li a {
+        font-size: 12px;
+        padding: 1px 0;
+    }
+    
+    .footer-section p {
+        font-size: 11px;
+        max-width: 250px;
+        line-height: 1.5;
+    }
+    
+    .footer-logo img {
+        max-width: 90px;
+    }
+    
+    .payment-methods,
+    .security-badges {
+        max-width: 180px;
+    }
+    
+    .payment-methods img,
+    .security-badges img {
+        max-width: 140px;
     }
 }
 
@@ -2751,8 +2871,18 @@ footer {
     .hero-content-inicial {
         grid-template-columns: 1fr;
         gap: 2rem;
-        text-align: center;
-        justify-items: center;
+        text-align: left;
+        justify-items: start;
+    }
+    .hero-text {
+        text-align: left;
+    }
+    .hero-title {
+        text-align: left;
+    }
+    .hero-description {
+        text-align: left;
+        max-width: 100%;
     }
     .hero-visual {
         margin-top: 2rem;
@@ -2763,6 +2893,20 @@ footer {
     .hero-inicial {
         min-height: 60vh;
         padding: 8vw 0;
+    }
+    .hero-content-inicial {
+        text-align: left;
+        justify-items: start;
+    }
+    .hero-text {
+        text-align: left;
+    }
+    .hero-title {
+        text-align: left;
+    }
+    .hero-description {
+        text-align: left;
+        max-width: 100%;
     }
     .hero-main-title {
         font-size: 2rem;
