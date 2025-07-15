@@ -2908,11 +2908,14 @@ footer {
         text-align: left;
         max-width: 100%;
     }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
     .hero-main-title {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
     .hero-accent {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
     .cta-button {
         padding: 1rem 2rem;
