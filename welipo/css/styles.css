@@ -1713,7 +1713,7 @@ header.scrolled {
 
 /* Footer */
 footer {
-    background: var(--dark-light);
+    background: var(--musgo-dark);
     padding: 60px 0 30px;
     overflow-x: hidden;
     width: 100%;
