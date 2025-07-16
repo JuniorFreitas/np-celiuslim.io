@@ -69,6 +69,64 @@ function initializeCountdown() {
 
 /*
 ========================================
+PRODUCT COUNTDOWN TIMER
+========================================
+*/
+// function initializeProductCountdown() {
+//     console.log('Inicializando countdown dos produtos...');
+    
+//     function updateProductCountdown() {
+//         const now = new Date();
+//         // Define o tempo final como 2 horas e 45 minutos a partir de agora
+//         const endTime = new Date(now.getTime() + (2 * 60 * 60 * 1000) + (45 * 60 * 1000) + (30 * 1000));
+        
+//         // Armazena o tempo final no localStorage se não existir
+//         if (!localStorage.getItem('productCountdownEnd')) {
+//             localStorage.setItem('productCountdownEnd', endTime.getTime());
+//         }
+        
+//         const endTimeStored = parseInt(localStorage.getItem('productCountdownEnd'));
+//         const timeDifference = endTimeStored - now.getTime();
+
+//         if (timeDifference <= 0) {
+//             // Reinicia o countdown para mais 2 horas e 45 minutos
+//             const newEndTime = new Date(now.getTime() + (2 * 60 * 60 * 1000) + (45 * 60 * 1000) + (30 * 1000));
+//             localStorage.setItem('productCountdownEnd', newEndTime.getTime());
+//             return;
+//         }
+
+//         // Calcula horas, minutos e segundos restantes
+//         const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+//         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+//         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+//         // Atualiza os elementos na tela
+//         const hoursElement = document.getElementById('hours');
+//         const minutesElement = document.getElementById('minutes');
+//         const secondsElement = document.getElementById('seconds');
+
+//         if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
+//         if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+//         if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
+
+//         // Adiciona efeito de urgência quando restam menos de 30 minutos
+//         if (timeDifference < 30 * 60 * 1000) {
+//             const countdownBanner = document.querySelector('.countdown-banner');
+//             if (countdownBanner) {
+//                 countdownBanner.style.animation = 'urgencyPulse 0.5s ease-in-out infinite';
+//             }
+//         }
+//     }
+
+//     // Inicializa o countdown
+//     updateProductCountdown();
+    
+//     // Atualiza a cada segundo
+//     setInterval(updateProductCountdown, 1000);
+// }
+
+/*
+========================================
 HEADER SCROLL EFFECT
 ========================================
 */
