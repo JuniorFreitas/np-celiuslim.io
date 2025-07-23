@@ -3859,10 +3859,26 @@ footer {
         gap: 12px;
         max-width: 250px;
         width: 100%;
+        justify-content: center;
+        align-items: center;
     }
     
     .guarantee-item i {
         font-size: 28px;
+    }
+    
+    .guarantee-item h4 {
+        text-align: center;
+    }
+    
+    .guarantee-item > div {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .guarantee-item p {
+        text-align: center;
+        margin: 0 auto;
     }
     
     .guarantee-item:nth-child(2) p {
@@ -3871,6 +3887,8 @@ footer {
         max-width: 160px;
         white-space: normal;
         word-wrap: break-word;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
@@ -3963,11 +3981,19 @@ footer {
     
     .guarantee-item h4 {
         font-size: 14px;
+        text-align: center;
+    }
+    
+    .guarantee-item > div {
+        text-align: center;
+        width: 100%;
     }
     
     .guarantee-item p {
         font-size: 12px;
         line-height: 1.4;
+        text-align: center;
+        margin: 0 auto;
     }
     
     .guarantee-item:nth-child(2) p {
@@ -3976,6 +4002,8 @@ footer {
         max-width: 180px;
         white-space: normal;
         word-wrap: break-word;
+        text-align: center;
+        margin: 0 auto;
     }
     
     /* Responsividade para a seção de introdução do Welipo em telas menores */
